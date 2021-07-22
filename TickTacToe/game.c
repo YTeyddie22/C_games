@@ -11,7 +11,7 @@ void drawBoard();
 int main()
 {
     int player = 1, i, choice;
-    char mark; //* X or O
+    char mark; 
 
     do
     {
