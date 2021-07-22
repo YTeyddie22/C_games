@@ -3,57 +3,57 @@
 #include <windows.h>;
 #include <stdlib.h>;
 
-char square[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+char square[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
 int checkWin();
 void drawBoard();
 
 int main()
 {
-    int player = 1, i, choice;
-    char mark; 
+    int player = 1, i, decision;
+    char mark;
 
     do
     {
         drawBoard();
         player = (player % 2 != 0) ? 1 : 2;
-        printf("Player %d, enter your choice: ", player);
-        scanf("%d", &choice);
+        printf("Player %d, enter your decision: ", player);
+        scanf("%d", &decision);
         mark = (player == 1) ? 'X' : 'O';
 
-        if (choice == 1 && square[1] == '1')
+        if (decision == 1 && square[1] == '1')
         {
             square[1] = mark;
         }
-        else if (choice == 2 && square[2] == '2')
+        else if (decision == 2 && square[2] == '2')
         {
             square[2] = mark;
         }
-        else if (choice == 3 && square[3] == '3')
+        else if (decision == 3 && square[3] == '3')
         {
             square[3] = mark;
         }
-        else if (choice == 4 && square[4] == '4')
+        else if (decision == 4 && square[4] == '4')
         {
             square[4] = mark;
         }
-        else if (choice == 5 && square[5] == '5')
+        else if (decision == 5 && square[5] == '5')
         {
             square[5] = mark;
         }
-        else if (choice == 6 && square[6] == '6')
+        else if (decision == 6 && square[6] == '6')
         {
             square[6] = mark;
         }
-        else if (choice == 7 && square[7] == '7')
+        else if (decision == 7 && square[7] == '7')
         {
             square[7] = mark;
         }
-        else if (choice == 8 && square[8] == '8')
+        else if (decision == 8 && square[8] == '8')
         {
             square[8] = mark;
         }
-        else if (choice == 9 && square[9] == '9')
+        else if (decision == 9 && square[9] == '9')
         {
             square[9] = mark;
         }
@@ -88,8 +88,9 @@ void drawBoard()
 {
     system("cls");
     printf(" Tic Tac Toe\n\n ");
-    printf("Player1 (X) - Player2 (O)\n");
+    printf("Player1 (X) - Player2 (O)\n\n");
 
+    printf("_________________\n");
     printf("  %c |  %c |  %c \n", square[1], square[2], square[3]);
     printf("____|____|_____\n");
     printf("  %c |  %c |  %c \n", square[4], square[5], square[6]);
